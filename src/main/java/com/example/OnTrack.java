@@ -51,7 +51,7 @@ public class OnTrack {
     public void addCommentToTask(String taskName, String comment) {
         Task task = findTask(taskName);
         if (task != null) {
-            task.setComment("");
+            task.setComment(comment);
         }
     }
 

@@ -32,7 +32,7 @@ public class OnTrack {
     public void updateTaskStatus(String taskName, Status taskStatus) {
         Task task = findTask(taskName);
         if (task != null) {
-            task.setStatus(Status.COMPLETED);
+            task.setStatus(taskStatus);
         }
     }
 
@@ -40,7 +40,7 @@ public class OnTrack {
     public Task findTask(String taskName) {
         for (Task task : taskList) {
             
-            if (!taskName.equals(task.getName())) {
+            if (taskName.equals(task.getName())) {
                 return task;
             }
         }
